@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Síndrome de Koro - O Segredo que Seu Corpo Esconde | Moçambique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #F4F2EE;
+            color: #111;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* HEADER/HERO */
+        .hero {
+            background: radial-gradient(circle at 10% 20%, #0c0b1a, #03010a);
+            color: white;
+            text-align: center;
+            padding: 80px 20px 100px;
+            position: relative;
+            border-bottom: 4px solid #c4450c;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #FFF, #F39C12);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .hero .sub {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #ffd966;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .badge-urgent {
+            background: #8b1e00;
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        .btn-curioso {
+            background: #E67E22;
+            border: none;
+            padding: 14px 42px;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 4px 20px rgba(230,126,34,0.5);
+        }
+
+        .btn-curioso:hover {
+            background: #c0392b;
+            transform: scale(0.97);
+        }
+
+        /* VSL */
+        .vsl-section {
+            background: #060014;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .vsl-card {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #000000bb;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 30px 40px rgba(0,0,0,0.5);
+            backdrop-filter: blur(4px);
+        }
+
+        video {
+            width: 100%;
+            display: block;
+            outline: none;
+        }
+
+        .legenda-vsl {
+            color: #ccc;
+            padding: 12px;
+            font-size: 0.85rem;
+            background: #111;
+        }
+
+        /* OFERTAS */
+        .ofertas {
+            padding: 80px 0;
+            background: #F8F5F0;
+        }
+
+        .grid-2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .card-oferta {
+            background: white;
+            border-radius: 48px;
+            max-width: 380px;
+            flex: 1;
+            padding: 36px 28px;
+            box-shadow: 0 20px 35px rgba(0,0,0,0.08);
+            transition: all 0.2s;
+            text-align: center;
+            border: 1px solid #e0dbd3;
+        }
+
+        .card-premium {
+            border: 2px solid #E67E22;
+            background: linear-gradient(145deg, #ffffff, #fff6ea);
+            position: relative;
+        }
+
+        .selo {
+            position: absolute;
+            top: -16px;
+            left: 30px;
+            background: #E67E22;
+            color: white;
+            font-weight: bold;
+            padding: 6px 20px;
+            border-radius: 60px;
+            font-size: 0.8rem;
+        }
+
+        .preco {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #0a0a1a;
+            margin: 20px 0;
+        }
+
+        .preco small {
+            font-size: 1rem;
+        }
+
+        .preco del {
+            font-size: 1.2rem;
+            color: #999;
+            margin-left: 8px;
+        }
+
+        .lista {
+            list-style: none;
+            text-align: left;
+            margin: 25px 0;
+        }
+
+        .lista li {
+            padding: 10px 0;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .check {
+            color: #E67E22;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .btn-comprar {
+            width: 100%;
+            background: #0C1A2E;
+            border: none;
+            color: white;
+            padding: 14px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 15px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-laranja {
+            background: #E67E22;
+            box-shadow: 0 8px 18px rgba(230,126,34,0.3);
+        }
+
+        .btn-laranja:hover {
+            background: #c0392b;
+            transform: scale(0.98);
+        }
+
+        .btn-comprar:hover {
+            transform: scale(0.98);
+        }
+
+        .garantia {
+            background: #1E2A3A;
+            color: white;
+            border-radius: 60px;
+            padding: 14px 24px;
+            text-align: center;
+            max-width: 550px;
+            margin: 40px auto 0;
+            font-size: 0.9rem;
+        }
+
+        .aviso-misterio {
+            background: #000000;
+            color: #ffbe76;
+            text-align: center;
+            padding: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+        }
+
+        footer {
+            background: #04020f;
+            color: #aaa;
+            text-align: center;
+            padding: 40px;
+        }
+
+        @media (max-width: 780px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero .sub { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="container">
+        <div class="badge-urgent">⚠️ ATENÇÃO MOCAMBIQUE ⚠️</div>
+        <h1>O QUE ESTÁ A DESAPARECER EM VOCÊ?</h1>
+        <div class="sub">NINGUÉM QUER FALAR SOBRE ISSO. MAS O SEU CORPO JÁ SABE.</div>
+        <p>Toque no botão abaixo e veja o vídeo proibido. O que vai ver pode salvar sua mente — ou assustá-lo para sempre.</p>
+        <button class="btn-curioso" id="scrollToVideoBtn">▶ ASSISTIR AGORA — ACESSO RESTRITO</button>
+    </div>
+</div>
+
+<!-- Sessão Vídeo -->
+<div class="vsl-section" id="vslSec">
+    <div class="container">
+        <div class="vsl-card">
+            <video id="koroVideo" controls poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Crect width='16' height='9' fill='%23111122'/%3E%3Ctext x='4' y='5' fill='%23e67e22' font-size='2'%3ECARREGANDO...%3C/text%3E%3C/svg%3E">
+                <source src="https://www.image2url.com/r2/default/videos/1777314246414-aeb6435a-98b7-48fa-8436-da47abd3cd08.mp4" type="video/mp4">
+                O seu navegador não suporta vídeo. Assista ao vídeo da Síndrome de Koro.
+            </video>
+            <div class="legenda-vsl">🔐 Vídeo exclusivo — Evidências que quase ninguém conta. Duração: 9min.</div>
+        </div>
+        
+        <div class="grid-2">
+         
+                <!-- Botão redireciona para link externo de checkout - NÍVEL 1 -->
+                <a href="https://pay.kiwify.com.br/seu-link-nivel1" target="_blank" class="btn-comprar" id="btnLinkNivel1" data-plano="essencial">QUERO MEU ACESSO →</a>
+            </div>
+    </div>
+</div>
+ 
+        
+<!-- copy misteriosa -->
+<div class="aviso-misterio">
+    <span>⚠️ VOCÊ SABE O QUE ACONTECE QUANDO TOCAM? ⚠️</span>
+</div>
+
+<!-- Ofertas: dois níveis com preços 249 MT e 599 MT e redirecionamento externo -->
+<div class="ofertas">
+    <div class="container">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 10px;">📦 O MANUSCRITO QUE NINGUÉM QUER QUE LEIA</h2>
+        <p style="text-align: center; max-width: 650px; margin: 0 auto 20px;">Dois níveis. O segundo vai te dar acesso ao segredo em VÍDEO — a verdade que a ciência escondeu por décadas.</p>
+        
+        <div class="grid-2">
+            <!-- Nível 1: E-book - 249 MT -->
+            <div class="card-oferta">
+                <h3>📕 NÍVEL 1 — O CÓDIGO OCULTO</h3>
+                <div class="preco">
+                    <small>MT</small> 249
+                    <del><small>1.050 MT</small></del>
+                </div>
+                <ul class="lista">
+                    <li><span class="check">✓</span> E-book "O Desaparecimento Silencioso" (35 páginas)</li>
+                    <li><span class="check">✓</span> Técnicas de emergência anti-pânico</li>
+                    <li><span class="check">✓</span> O que o seu urologista nunca te disse</li>
+                    <li><span class="check">✓</span> Acesso imediato</li>
+                </ul>
+                <!-- Botão redireciona para link externo de checkout - NÍVEL 1 -->
+                <a href="https://pay.kiwify.com.br/seu-link-nivel1" target="_blank" class="btn-comprar" id="btnLinkNivel1" data-plano="essencial">QUERO MEU ACESSO →</a>
+            </div>
+
+            <!-- Nível 2: Ebook + Vídeos - 599 MT -->
+            <div class="card-oferta card-premium">
+                <div class="selo">🔥 ACESSO TOTAL — MAIS VÍDEOS</div>
+                <h3>📀 NÍVEL 2 — A REVELAÇÃO PROIBIDA</h3>
+                <div class="preco">
+                    <small>MT</small> 599
+                    <del><small>2.490 MT</small></del>
+                </div>
+                <ul class="lista">
+                    <li><span class="check">✓</span> Tudo do Nível 1 +</li>
+                    <li><span class="check">✓</span> 4 Vídeos secretos com técnicas de retracção reversa</li>
+                    <li><span class="check">✓</span> Mapa completo: como impedir o "desaparecimento"</li>
+                    <li><span class="check">✓</span> Áudio "Grounding do Pânico" (ouça durante a crise)</li>
+                    <li><span class="check">✓</span> Bónus: Comunidade fechada no Telegram</li>
+                </ul>
+                <!-- Botão redireciona para link externo de checkout - NÍVEL 2 -->
+                <a href="https://pay.kiwify.com.br/seu-link-nivel2" target="_blank" class="btn-comprar btn-laranja" id="btnLinkNivel2" data-plano="premium">QUERO VER OS VÍDEOS AGORA →</a>
+            </div>
+        </div>
+
+        <div class="garantia">
+            🔒 GARANTIA 7 DIAS: Assista, leia, e se o medo não diminuir, DEVOLVEMOS 100% DO SEU DINHEIRO. SEM PERGUNTAS.
+        </div>
+        <p style="text-align: center; margin-top: 35px; font-size: 0.8rem;">⚠️ Últimas cópias para Moçambique. Após o lançamento, o Nível 2 será removido.</p>
+    </div>
+</div>
+
+<!-- Fragmento de curiosidade -->
+<div style="background:#111; padding: 25px; text-align: center; color:#f39c12;">
+  “O que você sente quando te tocam... Não é loucura. É o Koro. Existe uma explicação, e ela vai te chocar.”
+</div>
+
+<footer>
+    <p>© 2026 – Koro: A Verdade Secreta | Maputo - Beira - Nampula | Informação classificada para maiores de 18 anos.</p>
+    <p style="margin-top: 8px;">Este site não substitui consulta médica, mas revela o que ninguém te contou sobre a Síndrome do Encolhimento.</p>
+</footer>
+
+<script>
+    // Vídeo VSL
+    const videoElem = document.querySelector('#koroVideo');
+    if(videoElem) {
+        videoElem.load();
+    }
+
+    // Botão que rola suavemente para o vídeo 
+    const btnScroll = document.getElementById('scrollToVideoBtn');
+    if(btnScroll) {
+        btnScroll.addEventListener('click', () => {
+            document.getElementById('vslSec').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
+    // =============================================
+    // ATENÇÃO: SUBSTITUA OS LINKS ABAIXO PELOS SEUS LINKS REAIS DE CHECKOUT
+    // =============================================
+    // Nível 1 (249 MT) - Coloque o link real da sua plataforma de pagamento
+    const linkNivel1 = "https://pay.kiwify.com.br/seu-link-nivel1";
+    // Nível 2 (599 MT) - Coloque o link real da sua plataforma de pagamento
+    const linkNivel2 = "https://pay.kiwify.com.br/seu-link-nivel2";
+    
+    // Atualiza os links dos botões dinamicamente (caso queira mudar via código)
+    const btnNivel1 = document.getElementById('btnLinkNivel1');
+    const btnNivel2 = document.getElementById('btnLinkNivel2');
+    
+    if(btnNivel1) {
+        btnNivel1.href = linkNivel1;
+    }
+    if(btnNivel2) {
+        btnNivel2.href = linkNivel2;
+    }
+
+    // Opcional: Adicionar evento de clique para tracking se desejar
+    document.querySelectorAll('.btn-comprar').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            // Permitir navegação normal, apenas log para debug (opcional)
+            console.log('Redirecionando para checkout:', this.href);
+        });
+    });
+</script>
+
+<!-- Mensagem flutuante de urgência -->
+<div style="position: fixed; bottom: 10px; right: 15px; background: black; color: #e67e22; padding: 6px 12px; border-radius: 30px; font-size: 11px; font-weight: bold; z-index: 1000;">
+    ⚡ ÚLTIMAS 50 cópias — Moçambique
+</div>
+</body>
+</html>
