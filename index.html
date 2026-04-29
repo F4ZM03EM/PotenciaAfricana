@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Síndrome de Koro - O Segredo que Seu Corpo Esconde | Moçambique</title>
+    <title>Koro: Entenda e Retome o Controlo | Moçambique</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,117 +15,96 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: #F4F2EE;
-            color: #111;
+            font-family: 'Inter', sans-serif;
+            background: #F7F6F2;
+            color: #1E1E24;
             line-height: 1.5;
+            scroll-behavior: smooth;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* HEADER/HERO */
-        .hero {
-            background: radial-gradient(circle at 10% 20%, #0c0b1a, #03010a);
+        /* buttons */
+        .btn {
+            display: inline-block;
+            background: #E67E22;
             color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 16px 36px;
+            border-radius: 60px;
+            text-decoration: none;
             text-align: center;
-            padding: 80px 20px 100px;
-            position: relative;
-            border-bottom: 4px solid #c4450c;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(230,126,34,0.2);
+        }
+
+        .btn:hover {
+            background: #D35400;
+            transform: scale(0.98);
+            box-shadow: 0 6px 14px rgba(230,126,34,0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #E67E22;
+            color: #E67E22;
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: #E67E22;
+            color: white;
+        }
+
+        /* header / hero */
+        .hero {
+            background: linear-gradient(135deg, #0F172A 0%, #1A2A3A 100%);
+            color: white;
+            padding: 70px 0 90px;
+            text-align: center;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 2.7rem;
             font-weight: 800;
-            letter-spacing: -1px;
-            text-transform: uppercase;
-            background: linear-gradient(135deg, #FFF, #F39C12);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 20px;
+            line-height: 1.3;
+            max-width: 900px;
+            margin: 0 auto 20px;
         }
 
-        .hero .sub {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: #ffd966;
-            margin-bottom: 20px;
+        .hero .highlight {
+            color: #F39C12;
         }
 
         .hero p {
-            max-width: 700px;
-            margin: 0 auto 30px;
             font-size: 1.2rem;
             opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
         }
 
-        .badge-urgent {
-            background: #8b1e00;
+        .badge-cred {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(4px);
             display: inline-block;
             padding: 6px 18px;
             border-radius: 60px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
+            font-size: 0.8rem;
+            margin-bottom: 28px;
+            letter-spacing: 0.5px;
         }
 
-        .btn-curioso {
-            background: #E67E22;
-            border: none;
-            padding: 14px 42px;
-            border-radius: 60px;
-            font-weight: 800;
-            font-size: 1.2rem;
-            color: white;
-            cursor: pointer;
-            transition: 0.2s;
-            box-shadow: 0 4px 20px rgba(230,126,34,0.5);
-        }
-
-        .btn-curioso:hover {
-            background: #c0392b;
-            transform: scale(0.97);
-        }
-
-        /* VSL */
-        .vsl-section {
-            background: #060014;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .vsl-card {
-            max-width: 880px;
-            margin: 0 auto;
-            background: #000000bb;
-            border-radius: 32px;
-            overflow: hidden;
-            box-shadow: 0 30px 40px rgba(0,0,0,0.5);
-            backdrop-filter: blur(4px);
-        }
-
-        video {
-            width: 100%;
-            display: block;
-            outline: none;
-        }
-
-        .legenda-vsl {
-            color: #ccc;
-            padding: 12px;
-            font-size: 0.85rem;
-            background: #111;
-        }
-
-        /* OFERTAS */
-        .ofertas {
-            padding: 80px 0;
-            background: #F8F5F0;
+        /* identificação / lista de sintomas */
+        .identificacao {
+            background: white;
+            padding: 60px 0;
         }
 
         .grid-2 {
@@ -133,44 +112,95 @@
             flex-wrap: wrap;
             gap: 40px;
             justify-content: center;
-            margin-top: 40px;
+            align-items: center;
         }
 
-        .card-oferta {
-            background: white;
-            border-radius: 48px;
-            max-width: 380px;
+        .sintomas-list {
             flex: 1;
+            background: #FEF7E6;
+            padding: 32px;
+            border-radius: 32px;
+        }
+
+        .sintomas-list li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .emoji-bullet {
+            font-size: 1.8rem;
+        }
+
+        .explicacao {
+            flex: 1;
+        }
+
+        .explicacao h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .citacao {
+            border-left: 4px solid #E67E22;
+            background: #F3F0EA;
+            padding: 24px;
+            border-radius: 24px;
+            margin: 28px 0;
+        }
+
+        /* ofertas */
+        .ofertas {
+            background: #FCF9F4;
+            padding: 70px 0;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            margin: 48px 0 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 40px;
             padding: 36px 28px;
-            box-shadow: 0 20px 35px rgba(0,0,0,0.08);
+            max-width: 360px;
+            flex: 1;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.05);
             transition: all 0.2s;
-            text-align: center;
-            border: 1px solid #e0dbd3;
+            border: 1px solid #EDE6DA;
         }
 
         .card-premium {
             border: 2px solid #E67E22;
-            background: linear-gradient(145deg, #ffffff, #fff6ea);
+            background: linear-gradient(145deg, white, #FFFCF5);
             position: relative;
         }
 
         .selo {
-            position: absolute;
-            top: -16px;
-            left: 30px;
             background: #E67E22;
             color: white;
             font-weight: bold;
-            padding: 6px 20px;
+            padding: 5px 20px;
             border-radius: 60px;
-            font-size: 0.8rem;
+            display: inline-block;
+            font-size: 0.7rem;
+            position: absolute;
+            top: -12px;
+            left: 28px;
         }
 
         .preco {
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             font-weight: 800;
-            color: #0a0a1a;
             margin: 20px 0;
+            color: #1A2A3A;
         }
 
         .preco small {
@@ -178,239 +208,256 @@
         }
 
         .preco del {
-            font-size: 1.2rem;
-            color: #999;
+            font-size: 1.1rem;
+            color: #888;
             margin-left: 8px;
         }
 
-        .lista {
+        .feature-list {
             list-style: none;
             text-align: left;
-            margin: 25px 0;
+            margin: 24px 0;
         }
 
-        .lista li {
-            padding: 10px 0;
+        .feature-list li {
+            margin-bottom: 14px;
             display: flex;
             gap: 12px;
             align-items: center;
         }
 
-        .check {
-            color: #E67E22;
-            font-weight: bold;
-            font-size: 1.3rem;
-        }
-
-        .btn-comprar {
-            width: 100%;
-            background: #0C1A2E;
-            border: none;
-            color: white;
-            padding: 14px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: 0.2s;
-            margin-top: 15px;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .btn-laranja {
-            background: #E67E22;
-            box-shadow: 0 8px 18px rgba(230,126,34,0.3);
-        }
-
-        .btn-laranja:hover {
-            background: #c0392b;
-            transform: scale(0.98);
-        }
-
-        .btn-comprar:hover {
-            transform: scale(0.98);
-        }
-
         .garantia {
-            background: #1E2A3A;
+            background: #1E2F3D;
             color: white;
             border-radius: 60px;
-            padding: 14px 24px;
+            padding: 18px 28px;
             text-align: center;
-            max-width: 550px;
+            max-width: 650px;
             margin: 40px auto 0;
-            font-size: 0.9rem;
         }
 
-        .aviso-misterio {
-            background: #000000;
-            color: #ffbe76;
+        /* prova social / depoimentos */
+        .prova {
+            background: #FFFFFF;
+            padding: 60px 0;
+        }
+
+        .depoimentos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .dep-card {
+            background: #F9F8F5;
+            border-radius: 32px;
+            padding: 28px;
+            max-width: 300px;
             text-align: center;
-            padding: 20px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
+        }
+
+        /* segurança e aviso */
+        .aviso-medico {
+            background: #EAE6DF;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.85rem;
+            color: #2C3E50;
+            border-top: 1px solid #DDD5C6;
         }
 
         footer {
-            background: #04020f;
-            color: #aaa;
+            background: #0F172A;
+            color: #BDC3C7;
             text-align: center;
             padding: 40px;
+            font-size: 0.85rem;
         }
 
-        @media (max-width: 780px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero .sub { font-size: 1.2rem; }
+        .cta-fixo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #E67E22;
+            color: white;
+            padding: 12px 26px;
+            border-radius: 60px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 760px) {
+            .hero h1 { font-size: 1.9rem; }
+            .btn { padding: 12px 24px; font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
-<div class="hero">
+<!-- HERO - HEADLINE QUE PARA O SCROLL -->
+<section class="hero">
     <div class="container">
-        <div class="badge-urgent">⚠️ ATENÇÃO MOCAMBIQUE ⚠️</div>
-        <h1>O QUE ESTÁ A DESAPARECER EM VOCÊ?</h1>
-        <div class="sub">NINGUÉM QUER FALAR SOBRE ISSO. MAS O SEU CORPO JÁ SABE.</div>
-        <p>Toque no botão abaixo e veja o vídeo proibido. O que vai ver pode salvar sua mente — ou assustá-lo para sempre.</p>
-        <button class="btn-curioso" id="scrollToVideoBtn">▶ ASSISTIR AGORA — ACESSO RESTRITO</button>
-    </div>
-</div>
-
-<!-- Sessão Vídeo -->
-<div class="vsl-section" id="vslSec">
-    <div class="container">
-        <div class="vsl-card">
-            <video id="koroVideo" controls poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Crect width='16' height='9' fill='%23111122'/%3E%3Ctext x='4' y='5' fill='%23e67e22' font-size='2'%3ECARREGANDO...%3C/text%3E%3C/svg%3E">
-                <source src="https://www.image2url.com/r2/default/videos/1777314246414-aeb6435a-98b7-48fa-8436-da47abd3cd08.mp4" type="video/mp4">
-                O seu navegador não suporta vídeo. Assista ao vídeo da Síndrome de Koro.
-            </video>
-            <div class="legenda-vsl">🔐 Vídeo exclusivo — Evidências que quase ninguém conta. Duração: 9min.</div>
+        <div class="badge-cred">📘 +300 homens já acessaram • Moçambique
+            "Solução prática para não perder os órgãos genitais e como recuperar recuperar!"</div>
         </div>
-        
-        <div class="grid-2">
-         
-                <!-- Botão redireciona para link externo de checkout - NÍVEL 1 -->
-                <a href="https://eupay.shop/checkouts/checkout-page189/" target="_blank" class="btn-comprar" id="btnLinkNivel1" data-plano="essencial">QUERO MEU ACESSO</a>
+        <h1>Medo estranho no corpo? <span class="highlight">Não é loucura.</span> É um estado de pânico tratável — e você pode recuperar o controlo hoje.</h1>
+        <p>Informação clara, técnica e humana. Sem julgamentos. O que você sente tem explicação e solução.</p>
+        <a href="#ofertas" class="btn">👉 QUERO ENTENDER E PROTEGER-ME</a>
+    </div>
+</section>
+
+
+
+
+<!-- IDENTIFICAÇÃO IMEDIATA: O VISITANTE SE VÊ ALI -->
+<section class="identificacao">
+    <div class="container grid-2">
+        <div class="sintomas-list">
+            <!-- <h3 style="margin-bottom: 24px;">⚠️ Você já sentiu isso?</h3>
+            <ul>
+                <li><span class="emoji-bullet">😰</span> Acordar com medo inexplicável e suor frio</li>
+                <li><span class="emoji-bullet">🌀</span> Sensação estranha de que algo no corpo está “errado”</li>
+                <li><span class="emoji-bullet">💭</span> Pensamentos repetitivos de que algo vai desaparecer</li>
+                <li><span class="emoji-bullet">⚡</span> Ansiedade forte que vem sem aviso</li>
+                <li><span class="emoji-bullet">😶</span> Medo de falar sobre isso com alguém</li>
+            </ul> -->
+            <h3 style="margin-bottom: 24px;">⚠️ Isso já aconteceu com você… e você ficou em silêncio?</h3>
+
+<ul>
+    <li><span class="emoji-bullet">😰</span> Medo de alguém te tocar… e algo “acontecer” com o seu corpo</li>
+
+    <li><span class="emoji-bullet">🌀</span> Pensar que pode estar a acontecer algo com os seus órgãos… e não conseguir parar de pensar nisso</li>
+
+    <li><span class="emoji-bullet">💭</span> Medo de tocar alguém… e depois dizerem que você causou algo com o corpo dele</li>
+
+    <li><span class="emoji-bullet">⚡</span> Evitar sair… evitar pessoas… com medo de alguma situação acontecer</li>
+
+    <li><span class="emoji-bullet">😶</span> Medo de alguém próximo passar por isso… e você não saber o que fazer</li>
+</ul>
+            <p style="margin-top: 20px; font-weight: 500;">👉 Se identificou com algum: saiba que não está sozinho.</p>
+        </div>
+        <div class="explicacao">
+            <h3>O que está a acontecer?</h3>
+            <p>Esse fenômeno tem nome: Síndrome de Koro "DESAPARECIMENTO DE ÓRGÃOS GENITAIS" — e já foi estudado em vários países. Ele está ligado a crises intensas de ansiedade, muitas vezes associadas a crenças culturais e medo colectivo.</p>
+            <div class="citacao">
+                <p><strong>🔬 A boa notícia, baseada em evidências:</strong> é reversível. Quando você entende o mecanismo, o pânico perde força. E você recupera o controlo do seu corpo e da sua mente.</p>
             </div>
+            <p>✅ Não é loucura. Não é doença incurável. É um estado temporário, e existem estratégias práticas para interromper o medo.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SESSÃO VSL -> vídeo explicativo, não apelativo ao medo extremo -->
+<div style="background: #11171F; padding: 60px 0;" id="vslAnchor">
+    <div class="container">
+        <div style="max-width: 880px; margin: 0 auto; background: #000000bb; border-radius: 32px; overflow: hidden; box-shadow: 0 20px 30px rgba(0,0,0,0.4);">
+            <video controls poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Crect width='16' height='9' fill='%231A2A3A'/%3E%3Ctext x='3' y='5.5' fill='%23E67E22' font-size='2.5'%3EExplicação Koro%3C/text%3E%3C/svg%3E" style="width:100%; display:block;">
+                <source src="https://www.image2url.com/r2/default/videos/1777314246414-aeb6435a-98b7-48fa-8436-da47abd3cd08.mp4" type="video/mp4">
+            </video>
+            <div style="padding: 12px; color: #ccc; background:#0A0F17; text-align:center; font-size:0.85rem;">🎥 Vídeo educativo: como identificar e sair do ciclo de pânico (8min)</div>
+        </div>
     </div>
 </div>
- 
-        
-<!-- copy misteriosa -->
-<div class="aviso-misterio">
-    <span>⚠️ VOCÊ SABE O QUE ACONTECE QUANDO TOCAM? ⚠️</span>
-</div>
 
-<!-- Ofertas: dois níveis com preços 249 MT e 599 MT e redirecionamento externo -->
-<div class="ofertas">
+<!-- PROVA SOCIAL (DEPOIMENTOS) -->
+<section class="prova">
     <div class="container">
-        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 10px;">📦 O MANUSCRITO QUE NINGUÉM QUER QUE LEIA</h2>
-        <p style="text-align: center; max-width: 650px; margin: 0 auto 20px;">Dois níveis. O segundo vai te dar acesso ao segredo em VÍDEO — a verdade que a ciência escondeu por décadas.</p>
-        
-        <div class="grid-2">
-            <!-- Nível 1: E-book - 249 MT -->
-            <div class="card-oferta">
-                <h3>📕 NÍVEL 1 — O CÓDIGO OCULTO</h3>
-                <div class="preco">
-                    <small>MT</small> 189
-                    <del><small>489 MT</small></del>
-                </div>
-                <ul class="lista">
-                    <li><span class="check">✓</span> E-book "O Desaparecimento Silencioso" (35 páginas)</li>
-                    <li><span class="check">✓</span> Técnicas de emergência anti-pânico</li>
-                    <li><span class="check">✓</span> O que o seu urologista nunca te disse</li>
-                    <li><span class="check">✓</span> Acesso imediato</li>
-                </ul>
-                <!-- Botão redireciona para link externo de checkout - NÍVEL 1 -->
-                <a href="https://eupay.shop/checkouts/checkout-page189/" target="_blank" class="btn-comprar" id="btnLinkNivel1" data-plano="essencial">QUERO MEU ACESSO →</a>
+        <h2 style="text-align:center; font-size: 2rem; margin-bottom: 20px;">✅ Quem já passou por isso recuperou o controlo</h2>
+        <div class="depoimentos">
+            <div class="dep-card">
+                <p style="font-size:2rem;">👤</p>
+                <p><i>"Eu pensei que estava a enlouquecer… depois entendi que era pânico com explicação. Hoje sei como evitar. O guia mudou tudo."</i></p>
+                <strong>— José, Nampula</strong>
             </div>
+            <div class="dep-card">
+                <p style="font-size:2rem;">🧠</p>
+                <p><i>"Os vídeos me ajudaram a parar a crise em minutos. Finalmente me sinto no controlo outra vez."</i></p>
+                <strong>— Carlos, Pemba</strong>
+            </div>
+            <div class="dep-card">
+                <p style="font-size:2rem;">📘</p>
+                <p><i>"Pensava que era o único. Agora sei o que fazer e meu medo diminuiu 90%."</i></p>
+                <strong>— Feliz, Maputo</strong>
+            </div>
+        </div>
+    </div>
+</section>
 
-            <!-- Nível 2: Ebook + Vídeos - 599 MT -->
-            <div class="card-oferta card-premium">
-                <div class="selo">🔥 ACESSO TOTAL — MAIS VÍDEOS</div>
-                <h3>📀 NÍVEL 2 — A REVELAÇÃO PROIBIDA</h3>
-                <div class="preco">
-                    <small>MT</small> 279
-                    <del><small>779 MT</small></del>
-                </div>
-                <ul class="lista">
-                    <li><span class="check">✓</span> Tudo do Nível 1 +</li>
-                    <li><span class="check">✓</span> 4 Vídeos secretos com técnicas de retracção reversa</li>
-                    <li><span class="check">✓</span> Mapa completo: como impedir o "desaparecimento"</li>
-                    <li><span class="check">✓</span> Áudio "Grounding do Pânico" (ouça durante a crise)</li>
-                    <li><span class="check">✓</span> Bónus: Comunidade fechada no Telegram</li>
+<!-- OFERTA CLARA + GARANTIA (2 NÍVEIS) -->
+<section class="ofertas" id="ofertas">
+    <div class="container">
+        <h2 style="text-align:center; font-size:2rem;">📦 Solução prática: guia + vídeos</h2>
+        <p style="text-align:center; max-width:650px; margin:16px auto;">Passo a passo. Acesso imediato. Método usado em mais de 10 países.</p>
+        
+        <div class="card-container">
+            <!-- Nível 1 -->
+            <div class="card">
+                <h3>📘 Nível 1 — Guia Essencial</h3>
+                <div class="preco"><small>MT</small> 189 <del>489 MT</del></div>
+                <ul class="feature-list">
+                    <li><span style="color:#E67E22;">✓</span> E-book "O Desaparecimento Silencioso" (35 páginas)</li>
+                    <li><span style="color:#E67E22;">✓</span> Técnicas anti-pânico para usar na hora</li>
+                    <li><span style="color:#E67E22;">✓</span> O que seu médico precisa saber (guia prático)</li>
+                    <li><span style="color:#E67E22;">✓</span> Acesso imediato no celular/computador</li>
                 </ul>
-                <!-- Botão redireciona para link externo de checkout - NÍVEL 2 -->
-                <a href="https://eupay.shop/checkouts/checkout-page279/" target="_blank" class="btn-comprar btn-laranja" id="btnLinkNivel2" data-plano="premium">QUERO VER OS VÍDEOS AGORA →</a>
+                <a href="https://eupay.shop/checkouts/checkout-page189/" target="_blank" class="btn" style="width:100%; text-align:center;">QUERO O GUIA →</a>
+            </div>
+            <!-- Nível 2: Premium com vídeos -->
+            <div class="card card-premium">
+                <div class="selo">🔥 MAIS VÍDEOS + ÁUDIO</div>
+                <h3>📀 Nível 2 — Pacote Completo</h3>
+                <div class="preco"><small>MT</small> 279 <del>779 MT</del></div>
+                <ul class="feature-list">
+                    <li><span style="color:#E67E22;">✓</span> Tudo do Nível 1 +</li>
+                    <li><span style="color:#E67E22;">✓</span> 4 Vídeos com técnicas de retracção reversa</li>
+                    <li><span style="color:#E67E22;">✓</span> Áudio "Grounding do Pânico" (ouça na crise)</li>
+                    <li><span style="color:#E67E22;">✓</span> Mapa prático para impedir o medo</li>
+                    <li><span style="color:#E67E22;">✓</span> Comunvia Telegram para suporte</li>
+                </ul>
+                <a href="https://eupay.shop/checkouts/checkout-page279/" target="_blank" class="btn" style="background:#E67E22; width:100%;">QUERO VÍDEOS + GUIA →</a>
             </div>
         </div>
 
         <div class="garantia">
-            🔒 GARANTIA 7 DIAS: Assista, leia, e se o medo não diminuir, DEVOLVEMOS 100% DO SEU DINHEIRO. SEM PERGUNTAS.
+            🔒 GARANTIA 7 DIAS: Teste sem riscos. Se não sentir alívio ou clareza, devolvemos 100% do valor. Sem perguntas.
         </div>
-        <p style="text-align: center; margin-top: 35px; font-size: 0.8rem;">⚠️ Últimas cópias para Moçambique. Após o lançamento, o Nível 2 será removido.</p>
     </div>
-</div>
+</section>
 
-<!-- Fragmento de curiosidade -->
-<div style="background:#111; padding: 25px; text-align: center; color:#f39c12;">
-  “O que você sente quando te tocam... Não é loucura. É o Koro. Existe uma explicação, e ela vai te chocar.”
-</div>
+<!-- bloco de tranquilidade + aviso médico -->
+<section class="aviso-medico">
+    <div class="container">
+        <p><strong>⚠️ Importante:</strong> Este material é educativo e baseado em estudos científicos sobre a Síndrome de Koro e ansiedade. Não substitui o acompanhamento médico ou psicológico, mas oferece ferramentas valiosas para retomar o controlo. Em caso de emergência, procure uma unidade de saúde.</p>
+        <p style="margin-top: 12px;">🔐 Ambiente 100% seguro. Pagamento via M-Pesa e cartão. Acesso vitalício.</p>
+    </div>
+</section>
 
 <footer>
-    <p>© 2026 – Koro: A Verdade Secreta | Maputo - Beira - Nampula | Informação classificada para maiores de 18 anos.</p>
-    <p style="margin-top: 8px;">Este site não substitui consulta médica, mas revela o que ninguém te contou sobre a Síndrome do Encolhimento.</p>
+    <p>© 2026 – Informação Koro Moçambique | Maputo · Beira · Nampula | Apoio e acolhimento sem julgamento</p>
+    <p style="margin-top: 12px;">Este conteúdo é para maiores de 18 anos. Respeito, ciência e superação.</p>
 </footer>
 
+<!-- CTA flutuante discreto -->
+<a href="#ofertas" class="cta-fixo">⚡ RETOMAR CONTROLO</a>
+
 <script>
-    // Vídeo VSL
-    const videoElem = document.querySelector('#koroVideo');
-    if(videoElem) {
-        videoElem.load();
-    }
-
-    // Botão que rola suavemente para o vídeo 
-    const btnScroll = document.getElementById('scrollToVideoBtn');
-    if(btnScroll) {
-        btnScroll.addEventListener('click', () => {
-            document.getElementById('vslSec').scrollIntoView({ behavior: 'smooth' });
-        });
-    }
-
-    // =============================================
-    // ATENÇÃO: SUBSTITUA OS LINKS ABAIXO PELOS SEUS LINKS REAIS DE CHECKOUT
-    // =============================================
-    // Nível 1 (249 MT) - Coloque o link real da sua plataforma de pagamento
-    const linkNivel1 = "https://eupay.shop/checkouts/checkout-page189/";
-    // Nível 2 (599 MT) - Coloque o link real da sua plataforma de pagamento
-    const linkNivel2 = "https://eupay.shop/checkouts/checkout-page279/";
-    
-    // Atualiza os links dos botões dinamicamente (caso queira mudar via código)
-    const btnNivel1 = document.getElementById('btnLinkNivel1');
-    const btnNivel2 = document.getElementById('btnLinkNivel2');
-    
-    if(btnNivel1) {
-        btnNivel1.href = linkNivel1;
-    }
-    if(btnNivel2) {
-        btnNivel2.href = linkNivel2;
-    }
-
-    // Opcional: Adicionar evento de clique para tracking se desejar
-    document.querySelectorAll('.btn-comprar').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            // Permitir navegação normal, apenas log para debug (opcional)
-            console.log('Redirecionando para checkout:', this.href);
+    // garantia de rolagem suave e tracking opcional
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if(targetId === "#" || targetId === "") return;
+            const targetElem = document.querySelector(targetId);
+            if(targetElem) {
+                e.preventDefault();
+                targetElem.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     });
 </script>
-
-<!-- Mensagem flutuante de urgência -->
-<div style="position: fixed; bottom: 10px; right: 15px; background: black; color: #e67e22; padding: 6px 12px; border-radius: 30px; font-size: 11px; font-weight: bold; z-index: 1000;">
-    ⚡ ÚLTIMAS 50 cópias — Moçambique
-</div>
 </body>
 </html>
