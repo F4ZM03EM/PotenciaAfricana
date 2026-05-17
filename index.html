@@ -467,16 +467,60 @@
     ];
     
     // Vídeos VIP (90+)
-    const VIP_VIDEOS = [];
-    for (let i = 1; i <= 90; i++) {
-        VIP_VIDEOS.push({ url: `videoX/vip/video${i}.mp4`, titulo: `💎 VIP Exclusivo ${i}` });
-    }
+
+    //     const VIP_VIDEOS = [];
+    // for (let i = 1; i <= 90; i++) {
+    //     VIP_VIDEOS.push({ url: `videoX/vip/video${i}.mp4`, titulo: `💎 VIP Exclusivo ${i}` });
+    // }
+
     
+       const VIP_VIDEOS = [
+         { url:  "https://files.catbox.moe/9o4l42.mp4", titulo: "💎 VIP Exclusivo 1" },
+         { url: "https://files.catbox.moe/c4lj9f.mp4", titulo: "💎 VIP Exclusivo 2" },
+        { url: "https://files.catbox.moe/smgvxj.mp4", titulo: "💎 VIP Exclusivo 3" },
+        { url: "https://files.catbox.moe/znfj6w.mp4", titulo: "💎 VIP Exclusivo 4" },--
+        { url: "https://files.catbox.moe/gy2azy.mp4", titulo: "💎 VIP Exclusivo 5" },--
+        { url: "https://files.catbox.moe/smgvxj.mp4", titulo: "💎 VIP Exclusivo 6" },--
+        { url: "https://files.catbox.moe/hesdbx.mp4", titulo: "💎 VIP Exclusivo 7" },--
+        { url: "https://files.catbox.moe/5f3n4s.mp4", titulo: "💎 VIP Exclusivo 8" },
+        { url: "https://files.catbox.moe/8k0j6t.mp4", titulo: "💎 VIP Exclusivo 9" },
+         { url: "https://files.catbox.moe/3l2h9v.mp4", titulo: "💎 VIP Exclusivo 10" },
+         { url: "https://files.catbox.moe/6m7q1w.mp4", titulo: "💎 VIP Exclusivo 11" },
+         { url: "https://files.catbox.moe/4n8r5y.mp4", titulo: "💎 VIP Exclusivo 12" },
+         { url: "https://files.catbox.moe/9p0s3z.mp4", titulo: "💎 VIP Exclusivo 13" },
+         { url: "https://files.catbox.moe/1q6t8x.mp4", titulo: "💎 VIP Exclusivo 14" },
+         { url: "https://files.catbox.moe/7r2u4a.mp4", titulo: "💎 VIP Exclusivo 15" },
+         { url: "https://files.catbox.moe/5v9w0b.mp4", titulo: "💎 VIP Exclusivo 16" },
+         { url: "https://files.catbox.moe/8x3y7c.mp4", titulo: "💎 VIP Exclusivo 17" },
+         { url: "https://files.catbox.moe/2h1z5d.mp4", titulo: "💎 VIP Exclusivo 18" },
+         { url: "https://files.catbox.moe/6n0j9e.mp4", titulo: "💎 VIP Exclusivo 19" },
+         { url: "https://files.catbox.moe/3k8l2f.mp4", titulo: "💎 VIP Exclusivo 20"    },
+         { url: "https://files.catbox.moe/9m4p6g.mp4", titulo: "💎 VIP Exclusivo 21" },
+         { url: "https://files.catbox.moe/1r7u0h.mp4", titulo: "💎 VIP Exclusivo 22" },
+         { url: "https://files.catbox.moe/5s2v8i.mp4", titulo: "💎 VIP Exclusivo 23" },
+         { url: "https://files.catbox.moe/8y0w3j.mp4", titulo: "💎 VIP Exclusivo 24" },
+         { url: "https://files.catbox.moe/2l9x5k.mp4", titulo: "💎 VIP Exclusivo 25" },
+         { url: "https://files.catbox.moe/7n1z6m.mp4", titulo: "💎 VIP Exclusivo 26" },
+         { url: "https://files.catbox.moe/4h3a8o.mp4", titulo: "💎 VIP Exclusivo 27" },
+         { url: "https://files.catbox.moe/9p0s3z.mp4", titulo: "💎 VIP Exclusivo 28" },
+         { url: "https://files.catbox.moe/1q6t8x.mp4", titulo: "💎 VIP Exclusivo 29" },
+         { url: "https://files.catbox.moe/7r2u4a.mp4", titulo: "💎 VIP Exclusivo 30"}
+     // ... até 90 vídeos
+ ];
+
     // Vídeos ELITE (50+)
     const ELITE_VIDEOS = [];
     for (let i = 1; i <= 50; i++) {
         ELITE_VIDEOS.push({ url: `videoX/elite/elite${i}.mp4`, titulo: `⭐ ELITE Absoluto ${i}` });
     }
+
+
+
+    //     const ELITE_VIDEOS = [
+//     { url: "https://cdn.terabox.com/seulink/video1.mp4", titulo: "💎 VIP Exclusivo 1" },
+//     { url: "https://cdn.terabox.com/seulink/video2.mp4", titulo: "💎 VIP Exclusivo 2" },
+//     // ... até 90 vídeos
+// ];
     
     // Variáveis de estado
     let compartilhamentos = localStorage.getItem("shares") ? parseInt(localStorage.getItem("shares")) : 0;
@@ -813,3 +857,6 @@
 
 </body>
 </html>
+
+
+
